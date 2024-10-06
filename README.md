@@ -2,9 +2,10 @@
 # Galo #WebSpace
 
 #########################################
+To run the projectrun the app.py
 
-Download the Folder /Galo
-
-run the app.py
-
+#########################################
+Prerequisites:
+  Python3 with google.generativeai, Flask pandas installed
+  The Command-Line Tool wget
 #########################################
