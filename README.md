@@ -3,8 +3,8 @@
 
 #########################################
 
-Download the files and save it in a Folder
+Download the Folder /Galo
 
-open t2.html to run the web app
+open t2.html in the Folder to run the web app
 
 #########################################
