@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanet Explorer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            margin: 0;
+            height: 100vh;
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+
+        #planet-list {
+            width: 30%;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-right: 2px solid #2a2a2a;
+            overflow-y: scroll;
+        }
+
+        #planet-list h2 {
+            font-weight: 600;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ff6b6b;
+        }
+
+        #planet-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #planet-list ul li {
+            padding: 10px 15px;
+            margin: 10px 0;
+            background-color: #282828;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        #planet-list ul li:hover {
+            background-color: #ff6b6b;
+            color: white;
+        }
+
+        #planet-details {
+            flex-grow: 1;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to right, #1e1e1e, #121212);
+        }
+
+        #planet-details h1 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #ff6b6b;
+        }
+
+        #details {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        /* Scrollbar style */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #2a2a2a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #ff6b6b;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="planet-list">
+        <h2>Exoplanet List</h2>
+        <ul>
+            {% for planet in planet_names %}
+            <li onclick="showPlanetDetails('{{ planet }}')">{{ planet }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id="planet-details">
+        <div>
+            <h1>Click a planet to see details</h1>
+            <div id="details"></div>
+        </div>
+    </div>
+
+    <script>
+        function showPlanetDetails(planetName) {
+            // Redirect to the planet details page
+            window.location.href = `/planet/${planetName}`;
+        }
+    </script>
+</body>
+
+</html>
