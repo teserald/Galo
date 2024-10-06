@@ -1,0 +1,158 @@
+/* Basic styling */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+.solar-system-container {
+    perspective: 1500px; /* Perspective for the 3D effect */
+}
+
+.solar-system {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+}
+
+/* The Sun */
+.sun {
+    position: absolute;
+    width: 120px; /* Increased size */
+    height: 120px; /* Increased size */
+    background-color: yellow;
+    border-radius: 50%;
+    top: 50%;
+    left: calc(50% - 20px); /* Adjusted position to the left */
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 50px yellow;
+}
+
+/* Orbits */
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform-origin: center;
+    border: 1px dashed rgba(255, 255, 255, 0.5); /* Orbit lines */
+    cursor: pointer; /* Indicate that the orbits are clickable */
+}
+
+/* Different orbit sizes and animations */
+.mercury-orbit {
+    width: 180px; /* Increased orbit size */
+    height: 180px; /* Increased orbit size */
+    transform: translateZ(50px); /* Z-depth for Mercury */
+    animation: orbit 6s linear infinite; /* Slowed orbiting speed */
+}
+
+.earth-orbit {
+    width: 300px; /* Increased orbit size */
+    height: 300px; /* Increased orbit size */
+    transform: translateZ(150px); /* Z-depth for Earth */
+    animation: orbit 12s linear infinite; /* Slowed orbiting speed */
+}
+
+.mars-orbit {
+    width: 350px; /* Increased orbit size */
+    height: 350px; /* Increased orbit size */
+    transform: translateZ(200px); /* Z-depth for Mars */
+    animation: orbit 15s linear infinite; /* Slowed orbiting speed */
+}
+
+.jupiter-orbit {
+    width: 400px; /* Increased orbit size */
+    height: 400px; /* Increased orbit size */
+    transform: translateZ(250px); /* Z-depth for Jupiter */
+    animation: orbit 24s linear infinite; /* Slowed orbiting speed */
+}
+
+/* Planets */
+.planet {
+    position: absolute;
+    width: 30px; /* Increased size */
+    height: 30px; /* Increased size */
+    background-color: white;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mercury {
+    background-color: gray;
+    width: 12px; /* Increased size */
+    height: 12px; /* Increased size */
+}
+
+.earth {
+    background-color: blue;
+    width: 20px; /* Increased size */
+    height: 20px; /* Increased size */
+}
+
+.mars {
+    background-color: red;
+    width: 15px; /* Increased size */
+    height: 15px; /* Increased size */
+}
+
+.jupiter {
+    background-color: brown;
+    width: 30px; /* Increased size */
+    height: 30px; /* Increased size */
+}
+
+/* Orbit animation */
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color: black;
+    border-radius: 10px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

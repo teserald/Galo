@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Exoplanets</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        body {
+            background: url('https://j.gifs.com/OyRw0E@facebook.gif') no-repeat center center fixed; /* Background image */
+            background-size: cover; /* Cover the entire background */
+            color: white; /* Default text color */
+            font-family: Arial, sans-serif; /* Font for the body */
+        }
+        .container {
+            text-align: center; /* Center text */
+            margin: 0 auto; /* Center the container */
+            max-width: 1200px; /* Max width for the container */
+            padding-top: 30px; /* Space from the top */
+        }
+        .exoplanets-heading {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .exoplanet-type {
+            margin: 20px; /* Space between each exoplanet type */
+            background: rgba(0, 0, 0, 0.7); /* Dark background for contrast */
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block; /* Inline-block for horizontal alignment */
+            width: 300px; /* Fixed width */
+            box-sizing: border-box; /* Include padding and border in the width */
+        }
+        h2 {
+            color: #ffcc00; /* Color for Hot Jupiters */
+            margin: 10px 0; /* Margin for h2 */
+        }
+        .exoplanet-image {
+            width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover; /* Ensure the image covers the box */
+            border-radius: 10px; /* Add rounded corners */
+            margin-bottom: 15px; /* Space between image and text */
+        }
+        /* Change color of other exoplanet headings to match background */
+        .exoplanet-type h2:nth-child(2),
+        .exoplanet-type h2:nth-child(3),
+        .exoplanet-type h2:nth-child(4),
+        .exoplanet-type h2:nth-child(5) {
+            color: rgba(255, 255, 255, 0.9); /* Match to background color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="exoplanets-heading">Types of Exoplanets</h1>
+        
+        <!-- Hot Jupiters -->
+        <div class="exoplanet-type">
+            <h2 class="hot-jupiter-heading">1. Hot Jupiters</h2>
+            <a href="hotjupiter.html" target="_blank">
+                <img src="https://astronomynow.com/wp-content/uploads/2016/03/HD-80606-b_exoplanet_atmosphere_843x632.jpg" alt="Hot Jupiter" class="exoplanet-image">
+            </a>
+            <p>Hot Jupiters are gas giants that orbit very close to their parent stars, resulting in high surface temperatures. They are often tidally locked, with one side perpetually facing the star.</p>
+        </div>
+        
+        <!-- Super Earths -->
+        <div class="exoplanet-type">
+            <h2>2. Super Earths</h2>
+            <a href="superesarth.html" target="_blank">
+                <img src="https://science.nasa.gov/wp-content/uploads/2023/09/1799_1797_1598_super-earth-banner.jpg?w=1400" alt="Super Earth" class="exoplanet-image">
+            </a>
+            <p>Super Earths are exoplanets with a mass larger than Earth's but significantly smaller than that of Uranus or Neptune. They can be rocky or gaseous and may have the potential to support life.</p>
+        </div>
+
+        <!-- Mini-Neptunes -->
+        <div class="exoplanet-type">
+            <h2>3. Mini-Neptunes</h2>
+            <a href="minineptune.html" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Gasdwarf.jpg" alt="Mini-Neptune" class="exoplanet-image">
+            </a>
+            <p>Mini-Neptunes are exoplanets smaller than Neptune but larger than Earth. They typically have thick atmospheres and can be composed of gas and ice.</p>
+        </div>
+
+        <!-- Ice Giants -->
+        <div class="exoplanet-type">
+            <h2>4. Ice Giants</h2>
+            <a href="icegiant.html" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Neptune_Voyager2_color_calibrated.png/230px-Neptune_Voyager2_color_calibrated.png" alt="Ice Giant" class="exoplanet-image">
+            </a>
+            <p>Ice giants, like Uranus and Neptune, have a composition primarily of water, ammonia, and methane ice. They are often found in the outer regions of their solar systems.</p>
+        </div>
+
+        <!-- Terrestrial Planets -->
+        <div class="exoplanet-type">
+            <h2>5. Terrestrial Planets</h2>
+            <a href="terrestrial.html" target="_blank">
+                <img src="https://space-facts.com/wp-content/uploads/mercury-300x300.png" alt="Terrestrial Planet" class="exoplanet-image">
+            </a>
+            <p>Terrestrial planets are rocky bodies similar to Earth. They have solid surfaces and may have atmospheres. Some terrestrial exoplanets are located in the habitable zone, where conditions may be right for life.</p>
+        </div>
+    </div>
+</body>
+</html>

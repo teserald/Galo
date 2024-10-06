@@ -1,0 +1,50 @@
+body {
+    background: url('https://j.gifs.com/OyRw0E@facebook.gif') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Cover the entire background */
+    color: white; /* Default text color */
+    font-family: Arial, sans-serif; /* Font for the body */
+}
+
+.container {
+    text-align: center; /* Center text */
+    margin: 0 auto; /* Center the container */
+    max-width: 1200px; /* Max width for the container */
+    padding-top: 30px; /* Space from the top */
+}
+
+.exoplanets-heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.exoplanet-type {
+    margin: 20px; /* Space between each exoplanet type */
+    background: rgba(0, 0, 0, 0.7); /* Dark background for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block; /* Inline-block for horizontal alignment */
+    width: 300px; /* Fixed width */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+h2 {
+    margin: 10px 0; /* Margin for h2 */
+}
+
+.exoplanet-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the box */
+    border-radius: 10px; /* Add rounded corners */
+    margin-bottom: 15px; /* Space between image and text */
+}
+
+/* Hot Jupiters Heading */
+.hot-jupiter-heading {
+    color: #ffcc00; /* Specific color for Hot Jupiters */
+}
+
+/* Mini-Neptunes Heading */
+.mini-neptune-heading {
+    color: rgba(255, 255, 255, 0.9); /* Color for Mini Neptunes */
+}
