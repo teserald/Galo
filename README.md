@@ -4,8 +4,7 @@
 #########################################
 
 To run the project, run the command
-'python app.py' in cmd. (Note: running the file will install 
-the required Libraries or Modules by its own. Ensure stable and high speed connectivity.)
+'python app.py' in cmd. (Note: Ensure stable and high speed connectivity.)
 
 #########################################
 
