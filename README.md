@@ -2,10 +2,15 @@
 # Galo #WebSpace
 
 #########################################
-To run the projectrun the app.py
+
+To run the project run the app.py
 
 #########################################
+
 Prerequisites:
+
   Python3 with google.generativeai, Flask pandas installed
+  
   The Command-Line Tool wget
+  
 #########################################
