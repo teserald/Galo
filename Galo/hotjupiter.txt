@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Jupiters: Discovery, Types, and Current Data</title>
+    <link rel="stylesheet" href="hotjupiters.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Hot Jupiters: Discovery, Types, and Current Data</h1>
+    </header>
+
+    <div class="container">
+        <!-- Discovery Section -->
+        <section class="discovery-section">
+            <h2>Discovery of Hot Jupiters</h2>
+            <p>Hot Jupiters were first discovered in 1995 when astronomers detected 51 Pegasi b, a gas giant orbiting extremely close to its parent star. This marked a major breakthrough in exoplanet research, as it challenged existing theories of planetary formation.</p>
+            <img src="https://exoplanets.nasa.gov/internal_resources/578" alt="Discovery of Hot Jupiters" class="section-image">
+        </section>
+
+        <!-- Types of Hot Jupiters Section -->
+        <section class="types-section">
+            <h2>Types of Hot Jupiters</h2>
+            <ul>
+                <li><strong>Classical Hot Jupiters:</strong> Gas giants that orbit very close to their parent star, resulting in high surface temperatures. These planets can have orbits as short as a few days.</li>
+                <li><strong>Ultra-hot Jupiters:</strong> A sub-class of hot Jupiters that have extreme temperatures, often exceeding 2000°C, caused by their close proximity to their star.</li>
+                <li><strong>Puffy Hot Jupiters:</strong> Hot Jupiters with lower density but large radii, often caused by the intense heat that causes their atmospheres to expand.</li>
+            </ul>
+            <img src="https://exoplanets.nasa.gov/internal_resources/576" alt="Types of Hot Jupiters" class="section-image">
+        </section>
+
+        <!-- Current Data Section -->
+        <section class="current-data-section">
+            <h2>Current Data on Hot Jupiters</h2>
+            <p>As of 2024, over <strong>400 hot Jupiters</strong> have been discovered. Their orbits range from 0.01 to 0.1 AU (Astronomical Units) from their parent stars. Some of the most well-known hot Jupiters include:</p>
+            <ul>
+                <li><strong>WASP-121b:</strong> Known for its ultra-hot temperature and stratosphere.</li>
+                <li><strong>HD 209458 b:</strong> Famous for having water vapor detected in its atmosphere.</li>
+                <li><strong>Kepler-13A b:</strong> One of the hottest known hot Jupiters, with an atmospheric temperature of nearly 3000°C.</li>
+            </ul>
+            <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/wasp-121b.jpg" alt="Hot Jupiter Data" class="section-image">
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>Source: NASA Exoplanet Exploration</p>
+    </footer>
+</body>
+</html>
