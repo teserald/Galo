@@ -5,6 +5,6 @@
 
 Download the Folder /Galo
 
-open t2.html in the Folder to run the web app
+run the app.py
 
 #########################################
