@@ -1,4 +1,4 @@
-#Nasa Space Apps Challenge 2024 Project
+#Nasa Space Apps Challenge 2024 Project by team Galactic Nerds
 # Galo #WebSpace
 
 #########################################
