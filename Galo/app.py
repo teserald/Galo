@@ -24,7 +24,7 @@ def load_planet_names():
 
 # Generate planet details using Gemini model
 def generate_planet_details(planet_name):
-    prompt = f"Provide interesting facts about the {planet_name} which interests a kid and very informative.(reply with plain text)."
+    prompt = f"Provide interesting facts about the {planet_name} which interests a kid and very informative.(reply with plain text)(refer to https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+pscomppars&format=csv) ."
     try:
         response = model.generate_content(prompt)
         return response.text
