@@ -6,20 +6,25 @@ import google.generativeai as genai
 app = Flask(__name__)
 
 # Configure Gemini API key
-API_KEY = "AIzaSyCszEBggLfAhN87Abl7jw7in605pqhRyb0"  # Your Gemini API key
+API_KEY = "AIzaSyCszEBggLfAhN87Abl7jw7in605pqhRyb0"
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
+# Update the CSV file with wget
+def update_csv():
+    print("Updating confirmed_planets_names.csv with the latest data...")
+    os.system('wget "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name+from+pscomppars&format=csv" -O "confirmed_planets_names.csv"')
+
 # Load the CSV file and extract planet names
 def load_planet_names():
+    update_csv()  # Update the CSV on app start
     df = pd.read_csv('confirmed_planets_names.csv')
-    planet_names = df['pl_name'].tolist()  # 'pl_name' should be the column with planet names
+    planet_names = df['pl_name'].tolist()
     return planet_names
 
 # Generate planet details using Gemini model
 def generate_planet_details(planet_name):
     prompt = f"Provide interesting facts about the {planet_name} which interests a kid and very informative.(reply with plain text)."
-    
     try:
         response = model.generate_content(prompt)
         return response.text
@@ -33,20 +38,14 @@ def index():
 
 @app.route('/planet/<planet_name>')
 def planet(planet_name):
-    # Generate details about the planet
     details = generate_planet_details(planet_name)
-
-    # Write the details to a temporary text file
     with open('planet_details.txt', 'w') as f:
         f.write(details)
-
-    # Read from the temporary text file to display in the browser
     with open('planet_details.txt', 'r') as f:
         planet_details = f.read()
-
     return render_template('planet_details.html', planet_name=planet_name, planet_details=planet_details)
 
 if __name__ == '__main__':
     import webbrowser
-    webbrowser.open("http://127.0.0.1:5000")  # Open the browser automatically
+    webbrowser.open("http://127.0.0.1:5000")
     app.run(debug=True)
